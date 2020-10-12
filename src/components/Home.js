@@ -20,8 +20,12 @@ const Home = () => {
                 <Route path = {routes.users}/>
             </Switch>
             <Switch>
-                <Route path="/" component={Form} exact/>
-                <Route path="/users" component={Details}/>
+                <Route path="/" exact>
+                    <Form/>
+                </Route>
+                <Route path="/users">
+                    <Details/>
+                </Route>
             </Switch>
         </div>
     )
